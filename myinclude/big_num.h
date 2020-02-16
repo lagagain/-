@@ -52,7 +52,7 @@ namespace big_num_evir
 #define OUTN 5
 class big_num
 {
-	bool sb;	//¥¿­t
+	bool sb;	//æ­£è² 
 	string ID; 
 	
 	public:
@@ -149,7 +149,7 @@ bool big_num::min(vector<LONG> inp)
 	{
 		if(inp[i]<0)
 		{
-			cout<<"¿é¤J¿ù»~!! add(vec)"<<endl;
+			cout<<"è¼¸å…¥éŒ¯èª¤!! add(vec)"<<endl;
 			return false; 
 		}
 	}
@@ -164,7 +164,7 @@ bool big_num::add(vector<LONG> inp)
 	{
 		if(inp[i]<0)
 		{
-			cout<<"¿é¤J¿ù»~!! add(vec)"<<endl;
+			cout<<"è¼¸å…¥éŒ¯èª¤!! add(vec)"<<endl;
 			return false; 
 		}
 	}
@@ -204,7 +204,7 @@ inline LONG big_num::the_big(void)
 		{
 			n++;
 		}
-//		cout<<"num[1]["<<n<<"]­È¬°"<<num[1][n]<<endl; 
+//		cout<<"num[1]["<<n<<"]å€¼ç‚º"<<num[1][n]<<endl; 
 		if(num[1][n]==0)
 			return -1;
 		return num[1][n];
@@ -224,7 +224,7 @@ inline int big_num::compare(big_num inp)
 		tmp.show(1);
 		inp.showID(1);
 		inp.show(1);
-		cout<<"­ì¥»ªº";
+		cout<<"åŽŸæœ¬çš„";
 		showID(1);
 		show(1);
 #endif
@@ -494,19 +494,19 @@ inline bool big_num::min(vector<LONG> inp_s,vector<LONG> inp_b)
 				}
 				else
 				{
-					cout<<"¼K¼K...¥[¿ù¤F!"<<endl; 
+					cout<<"å˜¿å˜¿...åŠ éŒ¯äº†!"<<endl; 
 				}
 			}
 		}
 	}
 #ifdef DEBUG
 	showID(1);
-	cout<<"ÀË¬d«e";
+	cout<<"æª¢æŸ¥å‰";
 	show(1);
 	check();
-	cout<<"ÀË¬d«á";
+	cout<<"æª¢æŸ¥å¾Œ";
 	show(1); 
-	cout<<"-----------µ²§ômin(vec,vec)-------------"<<endl;
+	cout<<"-----------çµæŸmin(vec,vec)-------------"<<endl;
 #endif
 	check();
 	return true;
@@ -703,7 +703,7 @@ inline bool big_num::add(vector<LONG> inp_s,vector<LONG> inp_b)
 				}
 				else
 				{
-					cout<<"¼K¼K...¥[¿ù¤F!"<<endl; 
+					cout<<"å˜¿å˜¿...åŠ éŒ¯äº†!"<<endl; 
 				}
 			}
 		}
@@ -727,7 +727,7 @@ inline bool big_num::div(vector<LONG> oinp,vector<LONG> obinp)
 	{
 		if(oinp[i]<0)
 		{
-			cout<<"¿é¤J¿ù»~!"<<endl;
+			cout<<"è¼¸å…¥éŒ¯èª¤!"<<endl;
 			return false; 
 		}
 	}
@@ -735,7 +735,7 @@ inline bool big_num::div(vector<LONG> oinp,vector<LONG> obinp)
 	{
 		if(obinp[i]<0)
 		{
-			cout<<"¿é¤J¿ù»~!"<<endl;
+			cout<<"è¼¸å…¥éŒ¯èª¤!"<<endl;
 			return false; 
 		}
 	}
@@ -744,12 +744,12 @@ inline bool big_num::div(vector<LONG> oinp,vector<LONG> obinp)
 	big_num ans(0);
 	if(inp.the_big()<0)
 	{
-		cout<<"¤À¥À¬°¹s"<<endl;
+		cout<<"åˆ†æ¯ç‚ºé›¶"<<endl;
 		return false; 
 	}
 	while(1)
 	{
-/*		cout<<"­ì¥»";
+/*		cout<<"åŽŸæœ¬";
 		showID(1);
 		show(1);
 */
@@ -763,7 +763,7 @@ inline bool big_num::div(vector<LONG> oinp,vector<LONG> obinp)
 			tmp.right();
 			l_time--;
 		}
-//		cout<<"²¾°Ê"<<l_time<<endl; 
+//		cout<<"ç§»å‹•"<<l_time<<endl; 
 //		system("pause");
 		
 		while(tmp.the_num()<the_num())
@@ -773,9 +773,9 @@ inline bool big_num::div(vector<LONG> oinp,vector<LONG> obinp)
 		}
 		
 		LONG mult_time;
-//		cout<<"¨úlog "<<(LONG)log10(tmp.the_big())<<"    "<<(LONG)log10(the_big())<<endl;
+//		cout<<"å–log "<<(LONG)log10(tmp.the_big())<<"    "<<(LONG)log10(the_big())<<endl;
 		mult_time=(LONG)(log10(tmp.the_big())-log10(the_big()));
-//		cout<<"®t¤F"<<mult_time<<endl;
+//		cout<<"å·®äº†"<<mult_time<<endl;
 		while(mult_time<0)
 		{
 			tmp.multten();
@@ -818,11 +818,11 @@ inline bool big_num::div(vector<LONG> oinp,vector<LONG> obinp)
 		if(the_num()==(MAX)*(-1))
 			break;
 #ifdef DEBUG
-		cout<<"´î¥h";
+		cout<<"æ¸›åŽ»";
 		tmp.show(1);
-		cout<<"³Ñ¾l";
+		cout<<"å‰©é¤˜";
 		show(1);
-		cout<<"µª®×¥[";
+		cout<<"ç­”æ¡ˆåŠ ";
 		tmp_ans.show(1); 
 #endif
 		ans.add(tmp_ans);
@@ -854,7 +854,7 @@ inline bool big_num::div(vector<LONG> oinp)
 	{
 		if(oinp[i]<0)
 		{
-			cout<<"¿é¤J¿ù»~!"<<endl;
+			cout<<"è¼¸å…¥éŒ¯èª¤!"<<endl;
 			return false; 
 		}
 	}
@@ -863,12 +863,12 @@ inline bool big_num::div(vector<LONG> oinp)
 	big_num ans(0);
 	if(inp.the_big()<0)
 	{
-		cout<<"¤À¥À¬°¹s"<<endl;
+		cout<<"åˆ†æ¯ç‚ºé›¶"<<endl;
 		return false; 
 	}
 	while(1)
 	{
-/*		cout<<"­ì¥»";
+/*		cout<<"åŽŸæœ¬";
 		showID(1);
 		show(1);
 */
@@ -882,7 +882,7 @@ inline bool big_num::div(vector<LONG> oinp)
 			tmp.right();
 			l_time--;
 		}
-//		cout<<"²¾°Ê"<<l_time<<endl; 
+//		cout<<"ç§»å‹•"<<l_time<<endl; 
 //		system("pause");
 		
 		while(tmp.the_num()<the_num())
@@ -892,9 +892,9 @@ inline bool big_num::div(vector<LONG> oinp)
 		}
 		
 		LONG mult_time;
-//		cout<<"¨úlog "<<(LONG)log10(tmp.the_big())<<"    "<<(LONG)log10(the_big())<<endl;
+//		cout<<"å–log "<<(LONG)log10(tmp.the_big())<<"    "<<(LONG)log10(the_big())<<endl;
 		mult_time=(LONG)(log10(tmp.the_big())-log10(the_big()));
-//		cout<<"®t¤F"<<mult_time<<endl;
+//		cout<<"å·®äº†"<<mult_time<<endl;
 		while(mult_time<0)
 		{
 			tmp.multten();
@@ -937,11 +937,11 @@ inline bool big_num::div(vector<LONG> oinp)
 		if(the_num()==(MAX)*(-1))
 			break;
 #ifdef DEBUG
-		cout<<"´î¥h";
+		cout<<"æ¸›åŽ»";
 		tmp.show(1);
-		cout<<"³Ñ¾l";
+		cout<<"å‰©é¤˜";
 		show(1);
-		cout<<"µª®×¥[";
+		cout<<"ç­”æ¡ˆåŠ ";
 		tmp_ans.show(1); 
 #endif
 		ans.add(tmp_ans);
@@ -1038,7 +1038,7 @@ inline bool big_num::div(int inp)
 	}
 	else if(inp==0)
 	{
-		cout<<"¤À¥À¬°0"<<endl;
+		cout<<"åˆ†æ¯ç‚º0"<<endl;
 		return false; 
 	}
 
@@ -1096,7 +1096,7 @@ bool big_num::min(int s,int b)
 	using namespace EVIR;
 	if(s<0||b<0)
 	{
-		cout<<"¿é¤J¿ù»~"<<endl;
+		cout<<"è¼¸å…¥éŒ¯èª¤"<<endl;
 		return false; 
 	}
 	if(sb==true)
@@ -1156,7 +1156,7 @@ bool big_num::add(int s, int b)
 	using namespace EVIR;
 	if(s<0||b<0)
 	{
-		cout<<"¿é¤J¿ù»~"<<endl;
+		cout<<"è¼¸å…¥éŒ¯èª¤"<<endl;
 		return false; 
 	}
 	if(sb==true)
@@ -1260,7 +1260,7 @@ void big_num::check(void)
 {
 	using namespace EVIR;
 /*	big_num *tt=new big_num(num[0],num[1],sb);
-	tt->cg_name("¼È®É¤j¼Æ¦r");
+	tt->cg_name("æš«æ™‚å¤§æ•¸å­—");
 #ifdef DEBUG
 	cout<<"ID="<<tt->ID<<endl;
 	tt->show();
@@ -1458,7 +1458,7 @@ big_num::big_num(vector<LONG> inpa,vector<LONG> inpb,int isb)
 				break;
 			if(num[oi][i]<0)
 			{
-				cout<<"¿é¤J¦³¿ù!!"<<endl;
+				cout<<"è¼¸å…¥æœ‰éŒ¯!!"<<endl;
 				check_inp=false;
 				break;
 			}
@@ -1496,7 +1496,7 @@ big_num::big_num(vector<LONG> inpa)
 			break;
 		if(num[0][i]<0)
 		{
-			cout<<"¿é¤J¦³¿ù!!"<<endl;
+			cout<<"è¼¸å…¥æœ‰éŒ¯!!"<<endl;
 			check_inp=false;
 			break;
 		}
@@ -1527,7 +1527,7 @@ big_num::~big_num()
 {
 	#ifdef DEBUG
 		cout<<"ID="<<ID;
-		cout<<" ¸Ñºc"<<endl;
+		cout<<" è§£æ§‹"<<endl;
 	#endif	
 }
 /*-------------------------------------------------------*/
@@ -1554,7 +1554,7 @@ big_num::big_num(LONG s,LONG d,LONG tsb)
 inline void big_num::cg_name(string name)
 {
 	ID=name;
-	cout<<"¤w¸g§ó§ï¦WºÙ¬°"<<ID<<endl; 
+	cout<<"å·²ç¶“æ›´æ”¹åç¨±ç‚º"<<ID<<endl; 
 }
 
 /*-------------------------------------------------------*/
